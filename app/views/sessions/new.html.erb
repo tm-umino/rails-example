@@ -1,6 +1,12 @@
 <%= form_for :session, url: login_path do |f| %>
-  <%= f.text_field :email, class: "form-control" %>
-  <%= f.password_field :password, class: "form-control" %>
+  <div class="form-group">
+    <label>メールアドレス</label>
+    <%= f.text_field :email, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <label>パスワード</label>
+    <%= f.password_field :password, class: "form-control" %>
+  </div>
 
   <%= f.submit 'ログイン', class: "btn btn-default"%>
 <% end %>
